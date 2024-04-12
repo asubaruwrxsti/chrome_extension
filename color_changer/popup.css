@@ -1,0 +1,52 @@
+body {
+	background-color: #f0f0f0;
+	font-family: Arial, sans-serif;
+	width: 200px;
+	height: 200px;
+}
+
+#colorForm {
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#colorForm label,
+#colorForm input[type="color"] {
+	margin-right: 10px;
+}
+
+.color-row {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	margin-bottom: 10px;
+}
+
+.color-row label {
+	margin-bottom: 5px;
+}
+
+input[type="color"] {
+	width: 100px;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #4CAF50;
+	color: white;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #45a049;
+}
