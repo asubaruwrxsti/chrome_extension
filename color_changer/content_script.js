@@ -4,7 +4,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	}
 });
 
-
 function findElementsWithColor(color) {
 	const elements = document.querySelectorAll('*');
 	const foundElements = [];
@@ -14,11 +13,6 @@ function findElementsWithColor(color) {
 			foundElements.push(element);
 		}
 	});
-	
-	if (foundElements.length > 0) {
-		console.log(`Found ${foundElements.length} elements with color ${color}`);
-		chrome.runtime.local.set({ foundElements: foundElements });
-	}
 	return foundElements;
 }
 

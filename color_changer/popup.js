@@ -20,4 +20,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			window.open(chrome.runtime.getURL('options.html'));
 		}
 	});
+
+	chrome.storage.sync.get(
+		{
+			color: '#f4a3f1',
+			newColor: '#ff0000',
+			applyOnLoad: false,
+		},
+		(items) => {
+			document.getElementById('oldColor').value = items.color;
+			document.getElementById('newColor').value = items.newColor;
+		}
+	);
 });

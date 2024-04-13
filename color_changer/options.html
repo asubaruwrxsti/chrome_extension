@@ -6,14 +6,30 @@
     <div class="options-header">
         <h1>Background Changer Options</h1>
         <div class="options">
-            <label for="color">Default <strong>"From"</strong> color:</label>
-            <input type="color" id="color" value="#f4a3f1" />
+            <div class="option">
+                <label for="color">Default <strong>"From"</strong> color:</label>
+                <input type="color" id="color" value="#f4a3f1" />
+            </div>
 
-            <label for="newColor">Default <strong>"To"</strong> color:</label>
-            <input type="color" id="newColor" value="#00ff00" />
+            <div class="option">
+                <label for="newColor">Default <strong>"To"</strong> color:</label>
+                <input type="color" id="newColor" value="#00ff00" />
+            </div>
 
-            <label for="use-image-instead">Use image instead:</label>
-            <input type="checkbox" id="use-image-instead" />
+            <div class="option">
+                <label for="apply-on-load">Apply on page load:</label>
+                <input type="checkbox" id="apply-on-load" />
+            </div>
+
+            <div class="option">
+                <label for="use-image-instead">Use image instead:</label>
+                <input type="checkbox" id="use-image-instead" />
+            </div>
+
+            <div class="option" id="image-url">
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" />
+            </div>
         </div>
     </div>
     <div id="status"></div>

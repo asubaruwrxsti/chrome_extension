@@ -2,7 +2,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
@@ -13,8 +12,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .options-header {
@@ -35,13 +34,55 @@ h1 {
     flex: 1;
 }
 
-label,
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 20px;
+}
+
 input,
 button {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 button {
     cursor: pointer;
+}
+
+button#save {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    /* Green background */
+    border: none;
+    color: white;
+    /* White text */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    /* Rounded corners */
+}
+
+#image-url {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#image-url input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
