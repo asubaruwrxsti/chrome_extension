@@ -12,4 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		const newColor = document.getElementById('newColor').value;
 		chrome.runtime.sendMessage({ action: 'changeColor', oldColor: hexToRGB(oldColor), newColor: hexToRGB(newColor) });
 	});
+
+	document.querySelector('#go-to-options').addEventListener('click', function () {
+		if (chrome.runtime.openOptionsPage) {
+			chrome.runtime.openOptionsPage();
+		} else {
+			window.open(chrome.runtime.getURL('options.html'));
+		}
+	});
 });

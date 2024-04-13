@@ -14,7 +14,11 @@ function findElementsWithColor(color) {
 			foundElements.push(element);
 		}
 	});
-	console.log(`Found ${foundElements.length} elements with color ${color}`);
+	
+	if (foundElements.length > 0) {
+		console.log(`Found ${foundElements.length} elements with color ${color}`);
+		chrome.runtime.local.set({ foundElements: foundElements });
+	}
 	return foundElements;
 }
 
