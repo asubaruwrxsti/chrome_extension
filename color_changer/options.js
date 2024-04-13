@@ -56,3 +56,17 @@ document.getElementById('use-image-instead').addEventListener('change', function
         imageUrlInput.style.opacity = '0';
     }
 });
+
+document.getElementById('save').addEventListener('click', function () {
+    // Save options here...
+
+    var status = document.getElementById('status');
+    status.textContent = 'Options saved.';
+    status.style.opacity = '1';
+    status.style.maxHeight = '100px'; // Add this line
+
+    setTimeout(function () {
+        status.style.opacity = '0';
+        status.style.maxHeight = '0'; // Add this line
+    }, 1000);
+});
