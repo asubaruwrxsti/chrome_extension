@@ -2,7 +2,8 @@ body {
 	background-color: #f0f0f0;
 	font-family: Arial, sans-serif;
 	width: 200px;
-	height: 200px;
+	height: 250px;
+	border-radius: 10px;
 }
 
 #colorForm {
@@ -31,6 +32,7 @@ body {
 
 input[type="color"] {
 	width: 100px;
+	height: 35px;
 	padding: 10px;
 	margin-bottom: 20px;
 	border: none;
@@ -49,4 +51,15 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
 	background-color: #45a049;
+}
+
+.options-button {
+	margin-top: 20px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: none;
+	outline: none;
+	cursor: pointer;
 }
