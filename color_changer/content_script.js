@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		{
 			color: '#f4a3f1',
 			newColor: '#ff0000',
+			useImageInstead: false,
+			imageUrl: '',
 			applyOnLoad: false,
 		},
 		(items) => {
 			if (items.applyOnLoad) {
-				changeColorOrImage(hexToRGB(items.color), hexToRGB(items.newColor));
+				changeColorOrImage(hexToRGB(items.color), hexToRGB(items.newColor), items.imageUrl, items.useImageInstead);
 			}
 		}
 	);
@@ -38,10 +40,15 @@ function findElementsWithColor(color) {
 	return foundElements;
 }
 
-function changeColorOrImage(colorToReplace, colorToReplaceWith) {
+function changeColorOrImage(colorToReplace, colorToReplaceWith, imageUrl = '', useImageInstead = false) {
 	let foundElements = findElementsWithColor(colorToReplace);
 	foundElements.forEach(element => {
-		element.style.setProperty('background-color', colorToReplaceWith, 'important');
+		if (imageUrl !== '' && useImageInstead) {
+			element.style.setProperty('background-image', `url(${imageUrl})`, 'important');
+			element.style.setProperty('background-size', 'cover', 'important');
+		} else {
+			element.style.setProperty('background-color', colorToReplaceWith, 'important');
+		}
 	});
 	console.log(`Changed color from ${colorToReplace} to ${colorToReplaceWith}`);
 }

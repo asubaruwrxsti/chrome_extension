@@ -47,26 +47,29 @@ document.addEventListener('DOMContentLoaded', restoreOptions);
 document.getElementById('save').addEventListener('click', saveOptions);
 
 document.getElementById('use-image-instead').addEventListener('change', function () {
-    var imageUrlInput = document.getElementById('image-url');
+    let imageUrlInput = document.getElementById('image-url');
+    let newColor = document.getElementById('newColor');
     if (this.checked) {
         imageUrlInput.style.maxHeight = '100px';
         imageUrlInput.style.opacity = '1';
+
+        newColor.disabled = true;
     } else {
         imageUrlInput.style.maxHeight = '0';
         imageUrlInput.style.opacity = '0';
+
+        newColor.disabled = false;
     }
 });
 
 document.getElementById('save').addEventListener('click', function () {
-    // Save options here...
-
     var status = document.getElementById('status');
     status.textContent = 'Options saved.';
     status.style.opacity = '1';
-    status.style.maxHeight = '100px'; // Add this line
+    status.style.maxHeight = '100px';
 
     setTimeout(function () {
         status.style.opacity = '0';
-        status.style.maxHeight = '0'; // Add this line
-    }, 1000);
+        status.style.maxHeight = '0';
+    }, 500);
 });
