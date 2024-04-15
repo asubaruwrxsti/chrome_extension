@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-    flex: 2;
+    flex: 1;
 }
 
 .options {
@@ -32,12 +32,14 @@ h1 {
     border-left: 1px solid #000;
     padding-left: 20px;
     flex: 1;
+    justify-content: space-between;
 }
 
 .option {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -47,8 +49,7 @@ label {
 
 input,
 button {
-    display: block;
-    margin-bottom: 10px;
+    display: inline-block;
 }
 
 button {
@@ -92,4 +93,34 @@ button#save {
     opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
     overflow: hidden;
+}
+
+#wait-for-load {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#advanced-options {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#advanced-options h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#advanced-options .option {
+    margin-bottom: 10px;
+}
+
+#advanced-options .option label {
+    display: block;
+    margin-bottom: 5px;
 }

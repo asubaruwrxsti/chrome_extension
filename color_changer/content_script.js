@@ -9,13 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		{
 			color: '#f4a3f1',
 			newColor: '#ff0000',
+			waitForLoad: 0,
 			useImageInstead: false,
 			imageUrl: '',
 			applyOnLoad: false,
 		},
 		(items) => {
 			if (items.applyOnLoad) {
-				changeColorOrImage(hexToRGB(items.color), hexToRGB(items.newColor), items.imageUrl, items.useImageInstead);
+				console.log(`Waiting for ${items.waitForLoad} seconds to apply changes...`);
+				setTimeout(() => {
+					changeColorOrImage(hexToRGB(items.color), hexToRGB(items.newColor), items.imageUrl, items.useImageInstead);
+				}, items.waitForLoad * 1000);
 			}
 		}
 	);

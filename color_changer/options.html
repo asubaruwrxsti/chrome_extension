@@ -21,14 +21,25 @@
                 <input type="checkbox" id="apply-on-load" />
             </div>
 
-            <div class="option">
-                <label for="use-image-instead">Use image instead:</label>
-                <input type="checkbox" id="use-image-instead" />
-            </div>
+            <div id="advanced-options">
+                <h2>Advanced Options</h2>
 
-            <div class="option" id="image-url">
-                <label for="imageUrl">Image URL:</label>
-                <input type="text" id="imageUrl" />
+                <div class="option">
+                    <label for="wait-for-load">Wait for load:</label>
+                    <div>
+                        <input type="input" id="wait-for-load" value="0" /><span style="margin-left: 5px;">(s)</span>
+                    </div>
+                </div>
+
+                <div class="option">
+                    <label for="use-image-instead">Use image instead:</label>
+                    <input type="checkbox" id="use-image-instead" />
+                </div>
+
+                <div class="option" id="image-url">
+                    <label for="imageUrl">Image URL:</label>
+                    <input type="text" id="imageUrl" />
+                </div>
             </div>
         </div>
     </div>
