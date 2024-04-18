@@ -1,126 +1,183 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	background-color: #f4f4f4;
+	font-family: Arial, sans-serif;
 }
 
 #options-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 600px;
 }
 
 .options-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 h1 {
-    flex: 1;
+	flex: 1;
 }
 
 .options {
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid #000;
-    padding-left: 20px;
-    flex: 1;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	border-left: 1px solid #000;
+	padding-left: 20px;
+	flex: 1;
+	justify-content: space-between;
 }
 
 .option {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
 }
 
 label {
-    margin-right: 20px;
+	margin-right: 20px;
 }
 
 input,
 button {
-    display: inline-block;
+	display: inline-block;
 }
 
 button {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 button#save {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    /* Green background */
-    border: none;
-    color: white;
-    /* White text */
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 4px;
-    /* Rounded corners */
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	/* Green background */
+	border: none;
+	color: white;
+	/* White text */
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 4px;
+	/* Rounded corners */
 }
 
 #image-url {
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    overflow: hidden;
-    margin-top: 10px;
+	max-height: 0;
+	opacity: 0;
+	transition: max-height 0.3s ease, opacity 0.3s ease;
+	overflow: hidden;
+	margin-top: 10px;
 }
 
 #image-url input {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
 }
 
 #status {
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	transition: max-height 0.3s ease, opacity 0.3s ease;
+	overflow: hidden;
 }
 
 #wait-for-load {
-    width: 50px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+	width: 50px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
 }
 
 #advanced-options {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+	margin-top: 20px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: #f9f9f9;
 }
 
 #advanced-options h2 {
-    margin-bottom: 10px;
-    color: #333;
+	margin-bottom: 10px;
+	color: #333;
 }
 
 #advanced-options .option {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 #advanced-options .option label {
-    display: block;
-    margin-bottom: 5px;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+	border-radius: 10px;
+	/* Added to make the tabs rounded */
+}
+
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 5px;
+	transition: 0.3s;
+	font-size: 17px;
+	border-radius: 10px;
+	/* Added to make the buttons rounded */
+	margin: 5px;
+}
+
+.tab button:hover {
+	background-color: #ddd;
+}
+
+.tab button.active {
+	background-color: #ccc;
+}
+
+.tabcontent {
+	display: none;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	/* Added to make the content area rounded */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	opacity: 0;
+	/* Added to start with hidden content */
+	transition: opacity 0.5s, max-height 0.5s, margin 0.5s, padding 0.5s ease-in-out;
+	/* Added to animate opacity and height */
+	max-height: 0;
+	/* Added to start with zero height */
+	overflow: hidden;
+	/* Added to hide overflowing content */
+}
+
+.input {
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
 }
